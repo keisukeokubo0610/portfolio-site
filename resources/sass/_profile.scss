@@ -1,0 +1,165 @@
+.top-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    // padding: clamp(60px, 6vw, 120px) 0 0;
+    &__name {
+        text-align: center;
+        letter-spacing: 0.06em;
+        margin-bottom: 5rem;
+
+        h2 {
+            margin: 0;
+        }
+
+        span {
+            font-family: $roboto;
+            color: #9C9C9C;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+
+    &__skills {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            margin-bottom: 1.25rem;
+            font-family: $roboto;
+            font-weight: normal;
+            font-size: $font-size-md;
+
+            i {
+                margin-right: 4px;
+            }
+        }
+
+        &--main {
+            width: calc(100% /3);
+        }
+
+        &--sub {
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        &--other {
+            width: calc(100% /3);
+        }
+    }
+}
+
+.skill-container {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            // background-color: rgba(#000, .6);
+            margin-right: .8rem;
+            margin-bottom: .8rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 6px 12px;
+                border-radius: 5px;
+                min-width: 55px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                transition: all .4s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                i {
+                    color: white;
+                    font-size: $font-size-lg;
+                    margin-bottom: 4px;
+                }
+
+                span {
+                    font-size: 10px;
+                    display: block;
+                    color: white;
+                    font-family: $roboto;
+                }
+
+                &.php {
+                    background-color: rgba(#7377AD, .7);
+                }
+
+                &.laravel {
+                    background-color: rgba(#F72C20, .7);
+                }
+
+                &.mysql {
+                    background-color: rgba(#026487, .7);
+                }
+
+                &.html {
+                    background-color: rgba(#E85A24, .7);
+                }
+
+                &.css {
+                    background-color: rgba(#3299D4, .7);
+                }
+
+                &.js {
+                    background-color: rgba(#FAD94D, .7);
+                }
+
+                &.react {
+                    background-color: rgba(#3CC2E3, .7);
+                }
+
+                &.python {
+                    background-color: rgba(#FDBC44, .7);
+                }
+
+                &.wp {
+                    background-color: rgba(#1F8CBF, .7);
+                }
+
+                &.jquery {
+                    background-color: rgba(#1063A4, .7);
+                }
+
+                &.docker {
+                    background-color: rgba(#1D63ED, .7);
+                }
+
+                &.linux {
+                    background-color: rgba(#000000, .7);
+                }
+
+                &.git {
+                    background-color: rgba(#F15033, .7);
+                }
+
+                &.github {
+                    background-color: rgba(#0F1119, .7);
+                }
+
+                &.aws {
+                    background-color: rgba(#FF9901, .7);
+                }
+            }
+        }
+    }
+}

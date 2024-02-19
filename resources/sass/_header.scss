@@ -1,0 +1,23 @@
+// header {
+//     position: fixed;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     ul {
+//         display: inline-block;
+//     }
+//     .header-container {
+//         width: auto;
+//         ul {
+//             width: auto;
+//             // max-width: 100%;
+//             margin: 0 0 0 clamp(26px, 4vw, 180px);
+//             li {
+//                 margin-bottom: 26px;
+//                 &:last-child {
+//                     margin-bottom: 0;
+//                 }
+//             }
+//         }
+//     }
+// }

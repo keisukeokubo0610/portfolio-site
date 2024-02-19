@@ -1,0 +1,276 @@
+// フォントサイズの変数定義
+$font-size-base: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+$font-size-sm: clamp(0.625rem, 0.534rem + 0.45vw, 0.875rem);
+$font-size-md: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+$font-size-lg: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+$font-size-xl: clamp(1.5rem, 1.227rem + 1.36vw, 2.25rem);
+
+:root {
+    --shadow-color: 219deg 33% 27%;
+    --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34), 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34), 1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36), 0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36), 2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36), 5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+    --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34), 1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34), 2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34), 4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34), 7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34), 11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34), 17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34), 25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+.emphasis_design23 span {
+    background-color: #7B9AD0;
+    color: #fff;
+    margin: 0 0.03em;
+    display: inline-flex;
+    justify-content: center;
+    width: 1.7em;
+    height: 1.7em;
+    line-height: 1.7;
+    border-radius: 100vh;
+}
+
+.btn-circle-stitch {
+    display: inline-block;
+    text-decoration: none;
+    background: $site-color;
+    color: #FFF;
+    width: clamp(120px, 80vw, 180px);
+    height: clamp(120px, 80vw, 180px);
+    line-height: clamp(120px, 80vw, 180px);
+    font-size: $font-size-md;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px $site-color;
+    filter: drop-shadow(10px 8px 8px rgba(#000, .4));
+    border: dashed 1px #FFF;
+    transition: .4s;
+}
+
+.btn-circle-stitch:hover {
+    color: #FFF;
+    transform: scale(1.2);
+}
+
+html,
+body {
+    height: 100%;
+    // font-family: "Sawarabi Gothic", sans-serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: $font-size-base;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    // width: 100%;
+    // min-height: 100%;
+    box-sizing: border-box;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    transition: all .6s;
+
+    &:hover {
+        color: #999999;
+    }
+}
+
+h3 {
+    font-size: $font-size-md;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    height: 100vh;
+    width: 100%;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+
+    main {
+        width: clamp(760px, 80vw, 980px);
+        // max-width: 1080px;
+        margin: 0 auto;
+    }
+}
+
+.opening-container {
+    z-index: 1000;
+    background: #1d1f20;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, 3vw);
+    grid-template-columns: repeat(auto-fill, minmax(3vw, 1fr));
+    gap: 5px;
+}
+
+.rect {
+    width: 3vw;
+    height: 3vw;
+    display: block;
+    // background: rgba($site-color, .8);
+    background: rgba(#f0f0f0, .8);
+    position: relative;
+}
+
+.title-container {
+    display: block;
+    margin-bottom: 1.5rem;
+
+    h3 {
+        font-size: $font-size-xl;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.06em;
+
+        i {
+            color: white;
+            background-color: rgba($site-color, .8);
+            font-size: $font-size-sm;
+            width: clamp(24px, 3.5vw, 40px);
+            height: clamp(24px, 3.5vw, 40px);
+            border-radius: 50%;
+            margin-right: .8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            padding-left: 1rem;
+            font-size: $font-size-md;
+        }
+    }
+}
+
+// *********************************
+.scene {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: #1d1f20;
+    padding: 10rem;
+    text-align: center;
+    overflow: hidden;
+
+    h1 {
+        color: #9C9C9C;
+        position: absolute;
+        font-size: $font-size-xl;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.magic {
+    z-index: 5;
+    position: absolute;
+    top: calc(50% - 5rem);
+    left: calc(50% - 5rem);
+    width: 10rem;
+    height: 10rem;
+    background: url('https://wankonoomoi.co.jp/wp-content/uploads/2021/06/cavalier.jpg') 50% 50% no-repeat fixed;
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 0.9;
+    transition: transform 0.6s ease-in-out;
+
+    /* transformプロパティの変化をアニメーション化 */
+    &.expand {
+        transform: scale(5);
+    }
+}
+
+.check-out {
+    z-index: 100;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #9C9C9C;
+    font-family: test;
+
+    a {
+        color: rgba(255, 170, 170, 1);
+    }
+}
+
+
+/* 星のスタイル */
+
+.scroll-group {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    p {
+        cursor: pointer;
+        color: #9C9C9C;
+        letter-spacing: 0.06em;
+        transform-origin: center center;
+        animation: twinkleWord 1.8s infinite;
+        font-size: $font-size-md;
+        text-shadow: 0 0 4px rgba(#FFF, 0.3);
+    }
+}
+
+.star {
+    animation: twinkle 1.8s infinite;
+    transform-origin: center center;
+
+    i {
+        color: #9C9C9C;
+        font-size: $font-size-md;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes twinkleWord {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
